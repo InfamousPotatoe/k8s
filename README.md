@@ -36,8 +36,8 @@ Expose route with
 Get password: ``kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath='{.data.password}' | base64 -d ``
 
 ### Add Argo repo
-Add repo to ArgoCD and export the repo secret as yaml
-Use kubeseal to create a SealedSecret and deploy via 
+Add repo to ArgoCD and use kubeseal to create a SealedSecret and deploy via
+
     kubectl apply -f install/argo-repo-sealed-secret.yaml
 
 ## Istio
