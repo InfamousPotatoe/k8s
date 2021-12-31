@@ -4,9 +4,6 @@ Kubernetes dev/test environment for learning.
 # Installation
 Requires homebrew
 
-## Helm
-    brew install helm
-
 ## Docker
 Install Docker desktop: https://docs.docker.com/desktop/mac/install/
 This is preferred over using homebrew
@@ -15,11 +12,10 @@ This is preferred over using homebrew
     brew install minikube
     minikube config set driver docker
 
-## Start cluster
+Start minikube cluster with
+
     minikube start
 
-### Route to the cluster - when needed
-    minikube tunnel
 
 # Cluster Resources
 
@@ -34,11 +30,12 @@ This is preferred over using homebrew
     kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 
 Expose route with
+
     minikube tunnel
 
 Get password: ``kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath='{.data.password}' | base64 -d ``
 
-### Add repo
+### Add Argo repo
 Add repo to ArgoCD and export the repo secret as yaml
 Use kubeseal to create a SealedSecret and deploy via 
     kubectl apply -f install/argo-repo-sealed-secret.yaml
