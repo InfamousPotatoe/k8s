@@ -8,7 +8,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: test
-    repoURL: {{ .Values.repo }}
+    repoURL: https://github.com/InfamousPotatoe/k8s.git
     targetRevision: HEAD
     valueFiles: ../values.yaml
   project: default
