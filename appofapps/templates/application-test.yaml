@@ -2,12 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: test
+  namespace: argocd
 spec:
   destination:
-    namespace: argocd
+    namespace: {{ .Values.test.namespace }}
     server: 'https://kubernetes.default.svc'
   source:
-    path: test
+    path: {{ .Values.test.path }}
     repoURL: {{ .Values.repo }}
     targetRevision: HEAD
   project: default
