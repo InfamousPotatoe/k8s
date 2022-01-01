@@ -9,11 +9,9 @@ spec:
   source:
     path: appofapps/
     repoURL: https://github.com/InfamousPotatoe/k8s.git
-    targetRevision: HEAD
+    targetRevision: main
   project: default
   syncPolicy:
     automated:
       prune: false
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
