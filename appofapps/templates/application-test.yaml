@@ -10,7 +10,8 @@ spec:
     path: test
     repoURL: https://github.com/InfamousPotatoe/k8s.git
     targetRevision: HEAD
-    valueFiles: ../values.yaml
+    helm:
+      valueFiles: ../values.yaml
   project: default
   syncPolicy:
     automated:
