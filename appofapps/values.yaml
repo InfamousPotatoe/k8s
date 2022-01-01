@@ -1,4 +1,4 @@
-repoURL: https://github.com/InfamousPotatoe/k8s.git
+repo: https://github.com/InfamousPotatoe/k8s.git
 
 test:
   path: test
