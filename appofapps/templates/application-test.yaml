@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.test.name }}
+  name: test
 spec:
   destination:
     namespace: argocd
     server: 'https://kubernetes.default.svc'
   source:
-    path: {{ .Values.test.path }}
+    path: test
     repoURL: {{ .Values.repo }}
     targetRevision: HEAD
     valueFiles: ../values.yaml
   project: default
   syncPolicy:
     automated:
-      prune: {{ .Values.test.prune }}
-      selfHeal: {{ .Values.test.selfHeal }}
+      prune: false
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
