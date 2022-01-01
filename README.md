@@ -23,6 +23,8 @@ Start minikube cluster with
     brew install kubeseal
     kubectl apply -f install/sealed-secrets-controller.yaml
 
+## OLM
+        curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.19.1/install.sh | bash -s v0.19.1
 
 ## ArgoCD
     kubectl create namespace argocd
@@ -47,5 +49,3 @@ Add repo to ArgoCD and use kubeseal to create a SealedSecret and deploy via
     brew install istioctl
     istioctl install
 
-# Random stuff
-``kubectl config set-context $(kubectl config current-context) --namespace=argocd``

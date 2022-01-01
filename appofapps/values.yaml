@@ -8,3 +8,11 @@ test:
   branch: main
   selfHeal: true
   prune: false
+
+operators:
+  path: operators
+  name: operators
+  namespace: operators
+  branch: main
+  selfHeal: true
+  prune: false
