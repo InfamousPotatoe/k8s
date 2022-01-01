@@ -1,7 +1,7 @@
-repo: https://github.com/InfamousPotatoe/k8s.git
+repoURL: https://github.com/InfamousPotatoe/k8s.git
 
 test:
-  path: test
-  name: test
-  selfHeal: true
-  prune: false
+    path: test
+    name: test
+    selfHeal: true
+    prune: false
