@@ -38,7 +38,10 @@ Get password: ``kubectl get secret argocd-initial-admin-secret -n argocd -o json
 ### Add Argo repo
 Add repo to ArgoCD and use kubeseal to create a SealedSecret and deploy via
 
-    kubectl apply -f install/argo-repo-sealed-secret.yaml
+    kubectl apply -f install/argo-repo-sealed-secret.yaml -n argocd
+
+### Add AppOfApps
+    kubectl apply -f appofapps/templates/application-appofapps.yaml -n argocd
 
 ## Istio
     brew install istioctl
