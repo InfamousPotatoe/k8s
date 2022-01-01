@@ -8,7 +8,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: test
-    repoURL: https://github.com/InfamousPotatoe/k8s.git
+    repoURL: {{ .Values.repo }}
     targetRevision: HEAD
   project: default
   syncPolicy:
