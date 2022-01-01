@@ -10,6 +10,7 @@ spec:
     path: {{ .Values.test.path }}
     repoURL: {{ .Values.repoURL }}
     targetRevision: HEAD
+    valueFiles: ../values.yaml
   project: default
   syncPolicy:
     automated:
