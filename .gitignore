@@ -1,3 +1,4 @@
 argo_repo_secret.yaml
 argo_repo_secret*.yaml
 .DS_Store
+ignored/

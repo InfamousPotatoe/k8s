@@ -1,0 +1,6 @@
+repoURL: https://github.com/InfamousPotatoe/k8s.git
+
+AppOfApps:
+  path: appofapps
+  selfHeal: true
+  prune: false
