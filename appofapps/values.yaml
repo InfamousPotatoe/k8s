@@ -1,7 +1,10 @@
 repo: 'https://github.com/InfamousPotatoe/k8s.git'
+server: 'https://kubernetes.default.svc'
 
 test:
   path: 'test'
   name: 'test'
+  namespace: test
+  branch: main
   selfHeal: true
   prune: false
