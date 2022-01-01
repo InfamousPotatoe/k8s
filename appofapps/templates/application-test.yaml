@@ -8,7 +8,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: {{ .Values.test.path }}
-    repoURL: {{ .Values.repoURL }}
+    repoURL: {{ .Values.repo }}
     targetRevision: HEAD
     valueFiles: ../values.yaml
   project: default
